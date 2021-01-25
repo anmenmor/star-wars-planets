@@ -1,0 +1,12 @@
+<div class="row section">
+    <a routerLink="/">Register</a>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="registerEmail" name="email" type="email" [(ngModel)]="email" class="validate" placeholder="">
+          <label for="email">Email</label>
+        </div>
+      <span class="row red-text">{{errorMessage}}</span>
+      <div class="row">
+        <button class="btn waves-effect waves-light" (click)="login()" name="action">Login</button>
+      </div>
+  </div>

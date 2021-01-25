@@ -1,0 +1,28 @@
+<div class="row section">
+    <a routerLink="/login">Login</a>
+    <form (submit)="register()" class="col s6 offset-s3">
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="registerEmail" name="email" type="email" [(ngModel)]="email" class="validate" placeholder="">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="registerUsername" name="username" type="text" [(ngModel)]="username" class="validate" placeholder="">
+          <label for="username">Username</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="registerFullname" name="fullname" type="text" [(ngModel)]="fullname" class="validate" placeholder="">
+          <label for="fullname">Fullname</label>
+        </div>
+      </div>
+      <span class="row red-text">{{errorMessage}}</span>
+      <div class="row">
+        <button class="btn waves-effect waves-light" type="submit" name="action">Register
+        </button>
+      </div>
+    </form> 
+  </div>

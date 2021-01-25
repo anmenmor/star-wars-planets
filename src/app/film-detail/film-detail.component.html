@@ -1,0 +1,19 @@
+<div class="row" *ngIf="film">
+    <div class="col s6 offset-s1 cyan-text"><span>title: </span>{{film.title}}</div>
+    <div class="col s6 offset-s1 cyan-text"><span>episode_id: </span>{{film.episode_id}}</div>
+    <div class="col s6 offset-s1 cyan-text"><span>opening_crawl: </span>{{film.opening_crawl}}</div>
+    <div class="col s6 offset-s1 cyan-text"><span>release_date: </span>{{film.release_date}}</div>
+    <div class="col s6 offset-s1 cyan-text"><span>director: </span>{{film.director}}</div>
+    <div class="col s6 offset-s1 cyan-text"><span>producer: </span>{{film.producer}}</div>
+    <div class="col s6 offset-s1 cyan-text">
+        <span>planets: </span>
+        <ul>
+            <li class="col s12 m6 l3 green-text" *ngFor = "let planet of film.planets_info"
+            (click)="onSelect(planet)">
+            {{planet.name}}
+            </li>
+        </ul>
+    </div>
+</div>
+
+<app-planet-detail [planet]="selectedPlanet"></app-planet-detail>   
